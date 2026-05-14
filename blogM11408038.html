@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>層層疊疊的快樂：英式查佛 Trifle</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        berry: {
+                            50: '#fff1f2',
+                            100: '#ffe4e6',
+                            500: '#f43f5e',
+                            700: '#be123c',
+                            900: '#881337',
+                        },
+                        custard: {
+                            50: '#fefce8',
+                            200: '#fef08a',
+                            400: '#facc15',
+                        },
+                        sherry: {
+                            800: '#92400e',
+                            950: '#451a03',
+                        }
+                    },
+                    fontFamily: {
+                        display: ['Outfit', 'Noto Sans TC', 'sans-serif'],
+                        body: ['Noto Sans TC', 'sans-serif'],
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #fafaf9;
+            color: #1c1917;
+            overflow-x: hidden;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #be123c 0%, #451a03 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .trifle-shadow {
+            box-shadow: 0 20px 50px -12px rgba(136, 19, 55, 0.15);
+        }
+    </style>
+</head>
+<body class="font-body leading-relaxed">
+
+    <!-- Progress Bar -->
+    <div class="fixed top-0 left-0 w-full h-1 bg-stone-200 z-50">
+        <div id="progress" class="h-full bg-berry-500 transition-all duration-150" style="width: 0%"></div>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="relative min-h-[80vh] flex flex-col items-center justify-center overflow-hidden bg-stone-900">
+        <div class="absolute inset-0 z-0 opacity-60">
+            <img src='https://opal.google/board/blobs/11d54ec6-77ba-4834-a256-30031df3315f' alt='Trifle Banner' class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-stone-900/40 to-stone-900"></div>
+        </div>
+
+        <div class="relative z-10 container mx-auto px-6 text-center animate-fade-in-up">
+            <span class="inline-block px-4 py-1.5 mb-6 text-xs font-semibold tracking-widest text-custard-200 uppercase bg-white/10 backdrop-blur-md rounded-full border border-white/20">
+                British Culinary Heritage
+            </span>
+            <h1 class="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-8 leading-tight tracking-tight">
+                層層疊疊的快樂：<br>
+                <span class="text-custard-200 italic">英式查佛 Trifle</span><br>
+                的華麗秘辛！
+            </h1>
+            <div class="flex items-center justify-center space-x-4 text-stone-300">
+                <div class="h-px w-8 bg-berry-500"></div>
+                <span class="text-sm tracking-widest font-light">學號：M11408038</span>
+                <div class="h-px w-8 bg-berry-500"></div>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-float">
+            <svg class="w-6 h-6 text-white/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+            </svg>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-20 max-w-5xl">
+        
+        <!-- Intro Paragraph -->
+        <section class="mb-24 text-center max-w-3xl mx-auto">
+            <p class="text-xl md:text-2xl text-stone-600 leading-relaxed font-light">
+                如果你在英國人的家庭聚會中，看到一個透明且精緻的高腳玻璃碗，裡面裝滿了五顏六色、層層分明的食材，那別懷疑，你正對著英國甜點界的靈魂——<span class="font-semibold text-berry-700">「英式查佛（Trifle）」</span>打交道。這不僅是一道甜點，更是一場裝在玻璃碗裡的華麗派對。
+            </p>
+        </section>
+
+        <!-- Section 1: Structure - Bento Grid Style -->
+        <section class="mb-32">
+            <div class="flex items-center space-x-4 mb-12">
+                <h2 class="font-display text-3xl font-bold gradient-text">一、 甜點界的「違章建築」？</h2>
+                <div class="h-px flex-grow bg-stone-200"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+                <!-- Main description -->
+                <div class="md:col-span-12 glass-card p-8 rounded-3xl trifle-shadow border-l-4 border-berry-500 mb-6">
+                    <p class="text-lg text-stone-700">從一個旁觀者的視角來看，Trifle 簡直是甜點界的「堆疊藝術家」。一個合格的傳統 Trifle 絕非胡亂塞入，它像是一棟經過精準規劃的五層小豪宅，每一層都有其不可替代的戰略地位：</p>
+                </div>
+                
+                <!-- Floor Cards -->
+                <div class="md:col-span-4 bg-white p-6 rounded-3xl trifle-shadow hover:-translate-y-2 transition-transform duration-300">
+                    <span class="text-4xl mb-4 block">🍰</span>
+                    <h4 class="font-bold text-berry-900 mb-2">地基（底層）</h4>
+                    <p class="text-stone-600 text-sm">最底層通常由吸水性極佳的海綿蛋糕或手指餅乾構成。這層結構決定了整道甜點的穩固程度。</p>
+                </div>
+                
+                <div class="md:col-span-4 bg-berry-900 p-6 rounded-3xl text-white hover:-translate-y-2 transition-transform duration-300">
+                    <span class="text-4xl mb-4 block">🍷</span>
+                    <h4 class="font-bold text-custard-200 mb-2">靈魂浸漬</h4>
+                    <p class="text-berry-100 text-sm">蛋糕必須浸泡在香醇的雪利酒中。這種酒精的點綴讓海綿組織變得濕潤且微醺，賦予了原本單調的澱粉一種大人的成熟深度。</p>
+                </div>
+
+                <div class="md:col-span-4 bg-white p-6 rounded-3xl trifle-shadow hover:-translate-y-2 transition-transform duration-300">
+                    <span class="text-4xl mb-4 block">🍓</span>
+                    <h4 class="font-bold text-berry-900 mb-2">視覺裝潢</h4>
+                    <p class="text-stone-600 text-sm">視覺的焦點。覆盆子或草莓被輕柔地封鎖在晶瑩剔透的果凍裡。從玻璃碗外側看去，這是一道色彩斑斕的風景。</p>
+                </div>
+
+                <div class="md:col-span-6 bg-custard-50 p-8 rounded-3xl border border-custard-200 hover:-translate-y-2 transition-transform duration-300">
+                    <div class="flex items-start space-x-4">
+                        <span class="text-4xl">🍮</span>
+                        <div>
+                            <h4 class="font-bold text-stone-800 mb-2">核心地帶（卡士達）</h4>
+                            <p class="text-stone-600">這是整場演出的心臟。濃郁、厚實且滑順的蛋奶凍負責中和果酸與酒味，讓口感在舌尖達到完美的平衡。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="md:col-span-6 glass-card p-8 rounded-3xl hover:-translate-y-2 transition-transform duration-300">
+                    <div class="flex items-start space-x-4">
+                        <span class="text-4xl">☁️</span>
+                        <div>
+                            <h4 class="font-bold text-stone-800 mb-2">頂樓露台（鮮奶油）</h4>
+                            <p class="text-stone-600">最後鋪上雲朵般的打發鮮奶油。講究一點的，還會灑上烘烤過的杏仁片或巧克力碎片，象徵著整場儀式的完美收工。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: History - Timeline Style -->
+        <section class="mb-32 relative">
+            <div class="flex items-center space-x-4 mb-16">
+                <div class="h-px flex-grow bg-stone-200"></div>
+                <h2 class="font-display text-3xl font-bold gradient-text">二、 四百年的華麗轉身</h2>
+            </div>
+
+            <div class="space-y-12 max-w-4xl mx-auto relative before:absolute before:left-0 md:before:left-1/2 before:w-px before:h-full before:bg-stone-200">
+                <!-- Point 1 -->
+                <div class="relative flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/2 pr-0 md:pr-12 text-left md:text-right mb-4 md:mb-0">
+                        <h3 class="text-xl font-bold text-berry-700">16 世紀的簡陋開端</h3>
+                        <p class="text-stone-600 mt-2">最早於 1585 年的文獻中，它僅是一碗加了玫瑰水、糖與薑調味的厚重奶油，單純到近乎「瑣碎」。</p>
+                    </div>
+                    <div class="absolute left-[-5px] md:left-1/2 md:-translate-x-1/2 w-3 h-3 rounded-full bg-berry-500 border-4 border-white shadow"></div>
+                    <div class="md:w-1/2 pl-0 md:pl-12"></div>
+                </div>
+
+                <!-- Point 2 -->
+                <div class="relative flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/2 pr-0 md:pr-12"></div>
+                    <div class="absolute left-[-5px] md:left-1/2 md:-translate-x-1/2 w-3 h-3 rounded-full bg-berry-500 border-4 border-white shadow"></div>
+                    <div class="md:w-1/2 pl-0 md:pl-12 text-left">
+                        <h3 class="text-xl font-bold text-berry-700">18 世紀的結構進化</h3>
+                        <p class="text-stone-600 mt-2">到了 1750 年左右，英國人開始發揮他們在建築上的愛好，將浸過酒的蛋糕與卡士達進行層層堆疊，現代雛形正式定型。</p>
+                    </div>
+                </div>
+
+                <!-- Point 3 -->
+                <div class="relative flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/2 pr-0 md:pr-12 text-left md:text-right mb-4 md:mb-0">
+                        <h3 class="text-xl font-bold text-berry-700">19 世紀維多利亞時代</h3>
+                        <p class="text-stone-600 mt-2">玻璃工業助攻，透明高腳碗（Trifle Bowl）變成了家家戶戶展示財力與品味的舞台，「一眼看穿」的華麗呈現成了節慶主角。</p>
+                    </div>
+                    <div class="absolute left-[-5px] md:left-1/2 md:-translate-x-1/2 w-3 h-3 rounded-full bg-berry-500 border-4 border-white shadow"></div>
+                    <div class="md:w-1/2 pl-0 md:pl-12"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3 & 4: Culture & Debates - Interactive Look -->
+        <section class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-32">
+            <!-- Soul Dessert -->
+            <div class="bg-stone-100 p-10 rounded-[3rem]">
+                <h2 class="font-display text-2xl font-bold mb-8 text-stone-900 border-b pb-4 border-stone-200">三、 英國人的「靈魂甜點」</h2>
+                <ul class="space-y-6">
+                    <li class="flex items-start space-x-4">
+                        <div class="w-2 h-2 rounded-full bg-berry-500 mt-2 flex-shrink-0"></div>
+                        <p class="text-stone-700"><strong>死忠正宗派：</strong>美食衛道士堅持卡士達必須手工慢火熬煮，雪利酒等級不可含糊。</p>
+                    </li>
+                    <li class="flex items-start space-x-4">
+                        <div class="w-2 h-2 rounded-full bg-berry-500 mt-2 flex-shrink-0"></div>
+                        <p class="text-stone-700"><strong>便利家庭派：</strong>充滿煙火氣的「阿嬤配方」。只要疊得夠高、料夠足，每一口都是童年記憶。</p>
+                    </li>
+                    <li class="flex items-start space-x-4">
+                        <div class="w-2 h-2 rounded-full bg-berry-500 mt-2 flex-shrink-0"></div>
+                        <p class="text-stone-700"><strong>皇室的代名詞：</strong>如女王禧年大賽中的「檸檬瑞士捲查佛」，證明其國寶級精品地位。</p>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- The War -->
+            <div class="bg-berry-50 p-10 rounded-[3rem] border border-berry-100">
+                <h2 class="font-display text-2xl font-bold mb-8 text-berry-900 border-b pb-4 border-berry-200">四、 一場甜蜜戰爭</h2>
+                <div class="space-y-6">
+                    <div class="bg-white p-4 rounded-2xl shadow-sm border border-berry-100">
+                        <h4 class="font-bold text-berry-700 mb-1">「果凍之爭」（The Jelly Debate）</h4>
+                        <p class="text-sm text-stone-600 italic">"沒有果凍的人生是不完整的！"</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-2xl shadow-sm border border-berry-100">
+                        <h4 class="font-bold text-berry-700 mb-1">層次順序大亂鬥</h4>
+                        <p class="text-sm text-stone-600 italic">這不僅是順序問題，更涉及味道相互滲透的化學反應。</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-2xl shadow-sm border border-berry-100">
+                        <h4 class="font-bold text-berry-700 mb-1">酒精的合法性</h4>
+                        <p class="text-sm text-stone-600 italic">沒加雪利酒的，充其量只是「裝在碗裡的蛋糕」。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Future - Cards -->
+        <section class="mb-32">
+            <h2 class="font-display text-3xl font-bold text-center mb-16 gradient-text">五、 老派甜點的新靈魂</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Health -->
+                <div class="p-8 rounded-3xl glass-card text-center hover:bg-white transition-all group">
+                    <div class="w-16 h-16 bg-custard-50 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">🌱</div>
+                    <h4 class="font-bold mb-3">健康與包容</h4>
+                    <p class="text-sm text-stone-500">減糖、無麩質，甚至素食版本，讓所有人都能享受快樂。</p>
+                </div>
+                <!-- Fusion -->
+                <div class="p-8 rounded-3xl glass-card text-center hover:bg-white transition-all group">
+                    <div class="w-16 h-16 bg-custard-50 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">🍵</div>
+                    <h4 class="font-bold mb-3">異國風味</h4>
+                    <p class="text-sm text-stone-500">抹茶紅豆、熱帶芒果，展現了全球化下的口味遷徙。</p>
+                </div>
+                <!-- Social -->
+                <div class="p-8 rounded-3xl glass-card text-center hover:bg-white transition-all group">
+                    <div class="w-16 h-16 bg-custard-50 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">📸</div>
+                    <h4 class="font-bold mb-3">社群友善</h4>
+                    <p class="text-sm text-stone-500">演變為精緻的「罐子查佛」，一人一份，剛好裝進鏡頭。</p>
+                </div>
+                <!-- Eco -->
+                <div class="p-8 rounded-3xl glass-card text-center hover:bg-white transition-all group">
+                    <div class="w-16 h-16 bg-custard-50 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">♻️</div>
+                    <h4 class="font-bold mb-3">永續精神</h4>
+                    <p class="text-sm text-stone-500">處理剩餘蛋糕的初衷，正是對地球最溫柔的承擔。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conclusion -->
+        <section class="bg-stone-900 rounded-[3rem] p-12 md:p-20 text-center relative overflow-hidden">
+            <div class="absolute top-0 left-0 w-32 h-32 bg-berry-500/20 blur-3xl rounded-full"></div>
+            <div class="absolute bottom-0 right-0 w-48 h-48 bg-custard-400/10 blur-3xl rounded-full"></div>
+            
+            <div class="relative z-10 max-w-2xl mx-auto">
+                <h2 class="font-display text-3xl font-bold text-white mb-8">結語</h2>
+                <p class="text-stone-300 text-lg leading-relaxed mb-10">
+                    下次當你面對一碗層層疊疊的 Trifle 時，請記得，你品嚐的不只是糖分，而是四百年的歷史積澱、英式的家庭溫情，以及那種「在瑣事中尋找華麗」的哲學。你也想動手疊一個屬於自己的 Trifle 嗎？
+                </p>
+                <button class="bg-custard-400 hover:bg-custard-500 text-stone-900 px-8 py-4 rounded-full font-bold transition-all transform hover:scale-105">
+                    展開你的堆疊快樂之旅
+                </button>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        // Scroll progress bar logic
+        window.addEventListener('scroll', () => {
+            const progress = document.getElementById('progress');
+            const totalScroll = document.documentElement.scrollTop;
+            const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrollPercentage = (totalScroll / windowHeight) * 100;
+            progress.style.width = scrollPercentage + '%';
+        });
+
+        // Simple Intersection Observer for animation trigger
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in-up');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.style.opacity = '0';
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
